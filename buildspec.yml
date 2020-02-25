@@ -2,7 +2,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - dotnet restore HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
       - dotnet build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
   build:
     commands:
