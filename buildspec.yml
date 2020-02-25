@@ -5,7 +5,7 @@ phases:
       - dotnet build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
   build:
     commands:
-      - dotnet publish -c release -o ./build_output HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
+      - dotnet publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
 artifacts:
   files:
     - CodeBuild-HelloWorld/build_output/**/*
