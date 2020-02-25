@@ -2,10 +2,10 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - dotnet build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
+      - msbuild build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
   build:
     commands:
-      - dotnet publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
+      - msbuild publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
 artifacts:
   files:
     - CodeBuild-HelloWorld/build_output/**/*
