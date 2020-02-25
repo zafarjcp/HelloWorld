@@ -10,7 +10,7 @@ phases:
       - msbuild $env:PROJECT.csproj /p:TargetFrameworkVersion=v$env:DOTNET_FRAMEWORK /p:Configuration=Release /p:DeployIisAppPath="Default Web Site" /p:PackageAsSingleFile=false /p:OutDir=C:\codebuild\artifacts\ /t:Package
   build:
     commands:
-      - msbuild publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
+      - msbuild publish -c release -o ./build_output PROJECT.csproj
 artifacts:
     files:
     - CodeBuild-HelloWorld/build_output/**/*
