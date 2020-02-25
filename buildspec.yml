@@ -1,7 +1,7 @@
 version: 0.1
 env:
   variables:
-    PROJECT: HelloWorldWebApp
+    PROJECT: HelloWorldWebApp/HelloWorldWebApp
     DOTNET_FRAMEWORK: 4.8
 phases:
   pre_build:
