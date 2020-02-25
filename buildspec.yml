@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - dotnet restore HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
+      - dotnet restore HelloWorldWebApp/HelloWorldWebApp.csproj
+  build:
+    commands:
+      - dotnet publish -c release -o ./build_output HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
+      - dotnet publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
+artifacts:
+  files:
+    - CodeBuild-HelloWorld/build_output/**/*
