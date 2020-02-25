@@ -12,6 +12,5 @@ phases:
     commands:
       - msbuild publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
 artifacts:
-files:
-    - '**/*'
-  base-directory: 'C:\codebuild\artifacts\_PublishedWebsites\${env:PROJECT}_Package\Archive\'
+    files:
+    - CodeBuild-HelloWorld/build_output/**/*
