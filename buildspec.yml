@@ -3,11 +3,10 @@ phases:
   pre_build:
     commands:
       - dotnet restore HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
-      - msbuild restore HelloWorldWebApp/HelloWorldWebApp.csproj
+      - dotnet build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
   build:
     commands:
       - dotnet publish -c release -o ./build_output HelloWorldConsoleApp/HelloWorldConsoleApp.csproj
-      - msbuild publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
 artifacts:
   files:
     - CodeBuild-HelloWorld/build_output/**/*
