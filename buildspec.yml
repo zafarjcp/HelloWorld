@@ -2,7 +2,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - msbuild build /p:DeployOnBuild=true HelloWorldWebApp/HelloWorldWebApp.csproj
+      - msbuild restore HelloWorldWebApp/HelloWorldWebApp.csproj
   build:
     commands:
       - msbuild publish -c release -o ./build_output HelloWorldWebApp/HelloWorldWebApp.csproj
